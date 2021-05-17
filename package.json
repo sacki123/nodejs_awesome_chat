@@ -1,0 +1,25 @@
+{
+  "name": "nodejs_awesome_chat",
+  "version": "1.0.0",
+  "description": "hoangnm7",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sacki123/nodejs_awesome_chat.git"
+  },
+  "keywords": [
+    "sacki123"
+  ],
+  "author": "sacki123",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sacki123/nodejs_awesome_chat/issues"
+  },
+  "homepage": "https://github.com/sacki123/nodejs_awesome_chat#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
