@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js",
+    "start": "babel-node src/server.js",
     "callback": "babel-node callback.js",
     "promise": "babel-node promise.js",
     "async-await": "babel-node async-await.js"
@@ -24,7 +24,11 @@
   },
   "homepage": "https://github.com/sacki123/nodejs_awesome_chat#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bluebird": "^3.5.3",
+    "ejs": "^2.5.7",
+    "express": "^4.17.1",
+    "express-ejs-extend": "0.0.1",
+    "mongoose": "^4.13.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
