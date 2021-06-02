@@ -1,6 +1,7 @@
+import { fromCallback } from "bluebird";
 import express from "express";
-import getLoginRegister from "../controllers/authcontroller";
-import getHome from "../controllers/homeController";
+import {home, auth} from "../controllers/index";
+import {authvalid} from "./../validation/index"
 let router = express.Router();
 
 /**
@@ -9,25 +10,11 @@ let router = express.Router();
  * 
  */
 let initRoutes = (app)=>{
-    router.get("/", getHome);
-    router.get("/login-register", getLoginRegister);
-    return app.use("/", router);
+    router.get("/", home.getHome);//getHome là tạo riêng một cái controler xử lý riêng
+    router.get("/login-register", auth.getLoginRegister);//getLoginRegister là tạo riêng một cái controler xử lý riêng
+    router.post("/register",authvalid.register, auth.posRegister)
+    
+    return app.use("/", router);//cho app sử dụng cái router
 };
 
 module.exports = initRoutes;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
