@@ -1,28 +1,15 @@
 {
-  "name": "nodejs_awesome_chat",
+  "name": "test",
   "version": "1.0.0",
-  "description": "hoangnm7",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node src/server.js",
-    "callback": "babel-node callback.js",
-    "promise": "babel-node promise.js",
-    "async-await": "babel-node async-await.js"
+    "debug": "nodemon -L --inspect=0.0.0.0:9229 --exec babel-node src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sacki123/nodejs_awesome_chat.git"
-  },
-  "keywords": [
-    "sacki123"
-  ],
-  "author": "sacki123",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sacki123/nodejs_awesome_chat/issues"
-  },
-  "homepage": "https://github.com/sacki123/nodejs_awesome_chat#readme",
   "dependencies": {
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.2",
@@ -37,6 +24,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^2.0.7"
   }
 }
