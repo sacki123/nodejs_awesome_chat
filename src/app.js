@@ -4,7 +4,7 @@ express = require("express");
 // import express from "express";
 var app = express();
 const PORT = 8020;
-const HOST = 'localhost'; 
+const HOST = '0.0.0.0'; 
 app.get("/helloworld",(req,res)=> {
         res.send("<h1> Hello world !!!</h1>");
     });
