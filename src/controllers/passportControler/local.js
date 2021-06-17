@@ -37,7 +37,7 @@ let initPassportLocal = () =>{
     passport.serializeUser((user, done)=>{
         done(null, user._id);
     })
-    //Save user into variable(req.user)
+    //This is called by passport.session(). Save user into variable(req.user)
     passport.deserializeUser((id, done)=>{
         UserModel.findUserById(id)
         .then((user)=>{

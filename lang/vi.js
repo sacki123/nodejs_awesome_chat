@@ -25,7 +25,8 @@ export const transSuccess = {
     loginSuccess: (username)=>{
         return `
         Xin chào ${username}. Chúc bạn một ngày tốt lành.`;
-    }    
+    },
+    logout_success: "Đăng xuất thành công."    
 }
 export const transMail = {
     subject: "Awesome-chat: Xác nhận tài khoản",
