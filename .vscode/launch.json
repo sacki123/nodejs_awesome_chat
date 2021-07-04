@@ -1,29 +1,32 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/server.js",
-            "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "pwa-node"
+            "name": "Attach to Remote",
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}\\nodejs_awesome_chat\\src",
+            "remoteRoot": "/export/app/src",
+            "port": 9229,
+            "request": "attach",
+            "protocol": "inspector",
+            "type": "node",
         },
+        
         {
-            "type": "pwa-node",
+            "name": "Attach",
+            "port": 9229,
+            "request": "attach",
+            "type": "node"
+        }, 
+        {
+            "name": "Docker Node.js Launch",
+            "type": "docker",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\src\\server.js",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "preLaunchTask": "docker-run: debug",
+            "platform": "node",
+            "node": {
+                "package": "${workspaceFolder}/Nodejs/nodejs_awesome_chat/package.json",
+                "localRoot": "${workspaceFolder}/Nodejs/nodejs_awesome_chat"
+            }
         }
     ]
 }

@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  nodejs:
+    container_name: nodejs
+    build: ./
+    depends_on: 
+    - mongodb
+    volumes:
+      - ./nodejs_awesome_chat:/export/app/
+    networks:
+    - Node_js_network
+    env_file: 
+      - ./nodejs_awesome_chat/val.env
+    ports:
+    - 8020:8020
+    - 9229:9229
+    command: "npm run debug"
+    restart: always
+    # command: "node src/app.js"
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    environment: 
+    - PUID=1000
+    - PGID=1000
+    volumes: 
+    - /data:/data/db
+    ports: 
+    - 27017:27017
+    restart: unless-stopped  
+    networks: 
+      Node_js_network:
+        ipv4_address: 172.18.0.10  
+networks:
+  Node_js_network: 
+    driver: bridge

@@ -11,7 +11,7 @@ let register = [
     .isLength({min:8})
     .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}$/),
     check("email", transValidation.email_name)
-    .custom((value, {req})=>{
+    .custom((value,{req})=>{
         if (req.body.email.indexOf("hoang") == -1){
             return false
         }

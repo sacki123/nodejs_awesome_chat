@@ -11,4 +11,3 @@ npm install --save mongoose@4.13.9
 npm install --save-dev babel-cli@6.26.0
 npm install --save-dev babel-preset-env@1.7.0
 npm install --save-dev nodemon
-
