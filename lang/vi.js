@@ -12,7 +12,9 @@ export const transErrors = {
     account_actived: "Email chưa được Active",
     token_undefined: "Token không tồn tại. ",
     login_failed: "Tài khoản hoặc mật khẩu không chính xác.",
-    server_error: "Có lỗi phía Server."
+    server_error: "Có lỗi phía Server.",
+    avatar_type: "Kiểu file không hợp lệ.",
+    avatar_size: "Ảnh upload chỉ cho phép 1MB"
 }
 export const transSuccess = {
     account_create_success: {
@@ -26,7 +28,8 @@ export const transSuccess = {
         return `
         Xin chào ${username}. Chúc bạn một ngày tốt lành.`;
     },
-    logout_success: "Đăng xuất thành công."    
+    logout_success: "Đăng xuất thành công.",
+    avatar_updated: "Cập nhật dữ liệu thành công"
 }
 export const transMail = {
     subject: "Awesome-chat: Xác nhận tài khoản",

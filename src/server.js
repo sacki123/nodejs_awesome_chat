@@ -6,9 +6,54 @@ import configViewEngine from "./config/viewEngine";
 import initRoutes from "./routes/web";
 import bodyParser from "body-parser";
 import connectFlash from "connect-flash";
-import configSession from "./config/session"
-import passport from "passport"
-// const express = require('express');
+import configSession from "./config/session";
+import passport from "passport";
+// import pem from "pem";
+// import https from "https";
+
+// pem.createCertificate({ days: 1, selfSigned: true }, function (err, keys) {
+//   if (err) {
+//     throw err
+//   }
+//   //init App
+//     let app = express();
+
+//     /**Connect to MongoDB */
+//     connectDB();
+//     configSession(app);
+//     //config view engine
+//     configViewEngine(app);
+
+//     /**
+//      * Enable post data request
+//      */
+//     app.use(bodyParser.urlencoded({extended: true}));
+
+
+//     /**
+//      * Enable Flash message
+//      */
+//     app.use(connectFlash());
+
+
+//     /**
+//      * Config Passport
+//      */
+//     app.use(passport.initialize());
+//     app.use(passport.session());
+
+//     /**
+//      * Router
+//      */
+//     initRoutes(app);
+
+//   https.createServer({ key: keys.clientKey, cert: keys.certificate }, app).listen(process.env.PORT,() => {
+//     console.log(`Hello hoangnm7 ${process.env.HOST}:${process.env.PORT}/`)
+// });
+// })
+
+
+
 //init App
 let app = express();
 

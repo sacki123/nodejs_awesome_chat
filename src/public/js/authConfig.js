@@ -14,7 +14,7 @@ function showRegisterForm() {
   }
   
   function showLoginForm() {
-    $('#loginModal .registerBox').fadeOut('fast', function() {
+    $('#loginModal.registerBox').fadeOut('fast', function() {
       $('.loginBox').fadeIn('fast');
       $('.register-footer').fadeOut('fast', function() {
         $('.login-footer').fadeIn('fast');

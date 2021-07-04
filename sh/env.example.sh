@@ -13,3 +13,11 @@ export MAIL_USER=***
 export MAIL_PASSWORD=***
 export MAIL_HOST=***
 export MAIL_PORT=***
+
+export FA_APP_ID=***
+export FA_APP_SECERET=***
+export FA_CALLBACK_URL=***
+
+export GG_APP_ID=***
+export GG_APP_SECERET=***
+export GG_CALLBACK_URL=***

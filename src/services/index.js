@@ -1,2 +1,4 @@
 import authservice from "./authService";
- export const auth = authservice;
+import userService from "./userService"
+export const auth = authservice;
+export const user = userService;
